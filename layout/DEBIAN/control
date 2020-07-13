@@ -1,0 +1,9 @@
+Package: net.cadoth.nosbreload
+Name: NoSBReload
+Version: 0.1.0
+Architecture: iphoneos-arm
+Description: Replace sbreload with traditional respring to fix autofill issues
+Maintainer: nyuszika7h
+Author: nyuszika7h
+Section: System
+Tag: role::hacker

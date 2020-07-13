@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ "$1" = 'remove' ]; then
+    if [ -e /usr/bin/sbreload.real ]; then
+        echo 'Restoring original sbreload binary...'
+        mv /usr/bin/sbreload.real /usr/bin/sbreload
+    else
+        echo 'WARNING: Backup of original sbreload binary was not found. You should reinstall uikittools or restore rootfs.' >&2
+    fi
+fi

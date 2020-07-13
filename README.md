@@ -1,10 +1,10 @@
 # NoSBReload
 
-You may have noticed an issue with iOS 13 jailbreaks where autofill for passwords and SMS OTP codes doesn't work correctly. This appears to be caused by `sbreload`, which is supposed to be a faster and cleaner way to respring, but unfortunately it also breaks autofill. (You can tell when it's being used because you won't see a respring logo, just a black screen.)
+You may have noticed an issue with some iOS 13 jailbreaks where autofill for passwords and SMS OTP codes doesn't work correctly. This appears to be caused by `sbreload`, which is supposed to be a faster and cleaner way to respring, but unfortunately it also breaks autofill. (You can tell when it's being used because you won't see a respring logo, just a black screen.)
 
-This tweak simply replaces the `sbreload` binary with one that calls `killall -9 SpringBoard` instead, thereby avoiding the issue.
+This tweak simply replaces the `sbreload` binary with one that calls `killall -9 SpringBoard` instead, thereby avoiding the issue. You only need to do an `ldrestart` or `launchctl reboot userspace` once after installing this tweak, and then autofill should continue working through resprings.
 
-You only need to do an `ldrestart` or `launchctl reboot userspace` once after installing this tweak, and then autofill should continue working through resprings.
+It should only be necessary to install this if you're using unc0ver or checkra1n on iOS 13, or if you encounter other glitches caused by `sbreload` on iOS 12. odysseyra1n users should just update to libhooker 1.2.4 or newer instead.
 
 ## Notes
 

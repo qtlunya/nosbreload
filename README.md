@@ -9,7 +9,7 @@ It should only be necessary to install this if you're using unc0ver or checkra1n
 ## Notes
 
 * Cydia seems to use a hardcoded version of `sbreload`, so it won't be affected by this tweak. You should use another package manager or respring manually and not through Cydia.
-* If you use a tweak such as BatteryRamp, Sentinel, or SafeShutdown to hibernate your device, autofill may break after waking your device. Again, this is only an issue on unc0ver/checkra1n (not odysseyra1n), and an ldrestart or userspace reboot will fix it.
+* Some tweaks such as BatteryRamp, Sentinel, and SafeShutdown kill `backboardd` instead of `SpringBoard`, which also breaks autofill. This tweak doesn't fix that, so you'll have to do an ldrestart or userspace reboot afterwards to fix it. (Again, this is only an issue on unc0ver and checkra1n, not odysseyra1n.)
 
 ### Other notes
 * Killing SpringBoard this way will break "Time since last full charge" (which is only visible on iOS 13 if you're using the System Info tweak). However, many tweaks still respring by killing SpringBoard anyway, so you may run into that issue even without this tweak. Other parts of battery stats are not affected and will continue to work fine.

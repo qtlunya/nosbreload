@@ -4,7 +4,7 @@ You may have noticed an issue with unc0ver or checkra1n on iOS 13 where autofill
 
 This tweak simply replaces the `sbreload` binary with one that calls `killall -9 SpringBoard` instead, thereby avoiding the issue. You only need to do an `ldrestart` or `launchctl reboot userspace` once after installing this tweak, and then autofill should continue working through resprings.
 
-It is **not necessary** to install this if you're using Odyssey or odysseyra1n, just make sure to update to libhooker 1.2.4-1 or newer.
+It is **not necessary** to install this if you're using Odyssey or odysseyra1n, unless you just really want to see the respring logo all the time or use custom respring logos. Just make sure to update to libhooker 1.2.4-1 or newer.
 
 ## Notes
 

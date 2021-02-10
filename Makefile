@@ -1,8 +1,10 @@
 include $(THEOS)/makefiles/common.mk
 
-TOOL_NAME = nosbreload
+ARCHS = arm64
 
-nosbreload_FILES = main.m
-nosbreload_CFLAGS = -fobjc-arc
+TOOL_NAME = sbreload
+
+sbreload_FILES = main.m
+sbreload_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tool.mk

@@ -14,4 +14,3 @@ It is **not necessary** to install this if you're using Odyssey or odysseyra1n, 
 ### Other notes
 * Killing SpringBoard this way will break "Time since last full charge" (which is only visible on iOS 13 if you're using the System Info tweak). However, many tweaks still respring by killing SpringBoard anyway, so you may run into that issue even without this tweak. Other parts of battery stats are not affected and will continue to work fine.
 * Uninstalling this tweak should restore the original `sbreload` binary. If this does not happen for some reason, reinstall UIKit Tools or restore rootfs.
-* If UIKit Tools gets an update, you should uninstall this tweak before updating it to avoid conflicts.

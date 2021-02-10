@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <spawn.h>
+#include <sys/wait.h>
 
 int main(int argc, char *argv[], char *envp[]) {
     pid_t pid;

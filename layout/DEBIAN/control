@@ -1,6 +1,6 @@
 Package: net.cadoth.nosbreload
 Name: NoSBReload
-Version: 0.1.1
+Version: 0.1.1-1
 Architecture: iphoneos-arm
 Description: Replace sbreload with traditional respring to fix autofill issues
 Depiction: https://repo.cadoth.net/depictions/net.cadoth.nosbreload.html

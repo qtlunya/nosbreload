@@ -1,5 +1,18 @@
 #!/bin/sh
 
+case $(dpkg --print-architecture) in
+    iphoneos-arm)
+        root=/
+        ;;
+    iphoneos-arm64)
+        root=/var/jb/
+        ;;
+    *)
+        echo '[!] Not running on iOS. Aborting.'
+        exit 1
+        ;;
+esac
+
 if [ "$1" = remove ]; then
-    dpkg-divert --divert /usr/bin/sbreload.orig --package net.cadoth.nosbreload --rename --remove /usr/bin/sbreload
+    dpkg-divert --divert "${root}usr/bin/sbreload.orig" --package net.cadoth.nosbreload --rename --remove "${root}usr/bin/sbreload"
 fi

@@ -1,7 +1,20 @@
 #!/bin/sh
 
+case $(dpkg --print-architecture) in
+    iphoneos-arm)
+        root=/
+        ;;
+    iphoneos-arm64)
+        root=/var/jb/
+        ;;
+    *)
+        echo '[!] Not running on iOS. Aborting.'
+        exit 1
+        ;;
+esac
+
 install_hook() {
-    dpkg-divert --divert /usr/bin/sbreload.orig --package net.cadoth.nosbreload --rename --add /usr/bin/sbreload
+    dpkg-divert --divert "${root}usr/bin/sbreload.orig" --package net.cadoth.nosbreload --rename --add "${root}usr/bin/sbreload"
 }
 
 if [ "$1" = install ]; then
@@ -10,7 +23,7 @@ fi
 
 if [ "$1" = upgrade ] && [ "$2" = 0.1.0 ]; then
     echo 'Restoring original sbreload binary...'
-    mv /usr/bin/sbreload.real /usr/bin/sbreload
+    mv "${root}usr/bin/sbreload.real" "${root}/usr/bin/sbreload"
 
     install_hook "$@"
 fi

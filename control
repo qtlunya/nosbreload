@@ -8,3 +8,4 @@ SileoDepiction: https://repo.alexia.lol/sileo-depictions/net.cadoth.nosbreload
 Maintainer: alexia <me@alexia.lol>
 Author: alexia <me@alexia.lol>
 Section: System
+Depends: firmware (<< 15.0)
